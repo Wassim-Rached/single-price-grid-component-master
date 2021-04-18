@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+:root{
+    --premiary-color:rgb(10, 58, 85);
+}
+body{
+    font-family: Karla;
+    Font-size: 16px;
+    background-color: rgb(44, 180, 128);
+}
+/* START GLOBAL RULES */
+p{
+    color:var(--premiary-color);
+}
+.card h2{
+    color: white;
+}
+/* END GLOBAL RULES */
+a{
+    text-decoration: none;
+}
+.card{
+    overflow: hidden;
+    border-radius: 15px;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(2,400px);
+    grid-template-rows:repeat(2,250px);
+    width: 800px;
+    height: 500px;
+    margin: 100px auto;
+}
+.card1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: white;
+}
+/* START PHONE */
+@media only screen and (max-width: 849px){
+    .card{
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows:repeat(2,300px);
+    width: 350px;
+    height: 900px;}
+    .card1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+/* END PHONE */
+.card1 h2{
+    font-weight: 700;
+    color: hsl(179, 70%, 48%);
+}
+.card1 h3{
+    color: hsl(71, 73%, 54%);
+}
+.card1 p{
+    line-height: 30px;
+    max-width: 550px;
+}
+.card2{
+    color:var(--premiary-color);
+    background-color: hsl(179, 70%, 48%);
+}
+.card2 h3 span{
+    font-size: 30px;
+}
+.card2 .butt{
+    transition: 0.4s;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    padding: 13px 0;
+    width: 70%;
+    background-color: hsl(71, 73%, 54%);
+}
+.card2 .butt:hover{
+    transform: rotate(-3deg);
+    width: 60%;
+    }
+.card3{
+    color:var(--premiary-color);
+    background-color: hsl(176, 37%, 56%);
+}
+.card3 p{
+    max-width: 260px;
+    line-height: 25px;
+}
+h2,
+h3,
+p{
+    margin: 25px 30px;
+}
+footer .attribution{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(37, 35, 35);
+    width: 100%;
+    padding: 20px 0;
+    margin: 10px 0;
+    background-color:rgb(32, 78, 178);
+}
+footer .attribution  a{
+    color:gold;
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+}
